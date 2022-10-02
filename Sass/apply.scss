@@ -1,0 +1,92 @@
+@import 'global/variables';
+@import 'components/breakpoint';
+
+.container {
+    height: auto;
+    padding: 0;
+    .card {
+        width: 60%;
+        margin: auto;
+        height: auto;
+        background: $light;
+        border-radius: 5px;
+        padding: 20px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+        .card-logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        a {
+            text-decoration: none;
+            .card-title {
+                text-align: center;
+                #position {
+                    color: $primary;
+                    font-weight: bold;
+                }
+                button {
+                    width: auto;
+                    padding: 0px 20px;
+                }
+                #position,
+                button {
+                    margin-top: 10px;
+                }
+            }
+        }
+        .card-detail {
+            button {
+                &:hover {
+                    color: $dark  !important;
+                    cursor: default;
+                }
+            }
+            .btn {
+                border-radius: 0px;
+                margin-top: 25px;
+                margin-bottom: 10px;
+                text-align: start;
+                background-color: $lightGray;
+                color: $dark;
+                width: 100%;
+                padding-left: 10px;
+            }
+            .but {
+                margin-top: 5px;
+                display: flex;
+                button {
+                    text-align: start;
+                    border-radius: 0px;
+                    width: 30%;
+                    background: $lightGray;
+                    color: $dark;
+                    padding-left: 10px;
+                }
+                p {
+                    margin-left: 15px;
+                }
+            }
+        }
+    }
+
+    @include responsive('mobile') {
+        .card {
+            width: 90% !important;
+        }
+        .but {
+            flex-direction: column;
+            button {
+                width: 50% !important;
+            }
+        }
+    }
+    @include responsive('tablet') {
+        .card {
+            width: 75%;
+        }
+    }
+}

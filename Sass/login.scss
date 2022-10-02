@@ -1,0 +1,69 @@
+@import 'global/variables';
+@import 'components/breakpoint';
+.cand {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 30px;
+}
+
+.container {
+  height: auto;
+  background: $lightGray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .form {
+    height: auto;
+    flex-basis: 40%;
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    background: $light;
+    padding: 25px 20px;
+    margin: 50px 0px;
+    h2 {
+      text-align: center
+    }
+    .email, .password {
+      @import 'components/input';
+      input {
+        width: 100%;
+        height: 45px;
+        box-sizing: border-box;
+        margin-top: 20px;
+      }
+    }
+    .check, .button, p {
+      margin-top: 20px;
+    }
+    .button {
+      .btn {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+    p {
+      text-align: center;
+      a {
+        text-decoration: none;
+        color: $primary;
+        font-weight: bold;
+        &:hover {
+          color: $subcolor;
+        }
+      }
+    }
+  }
+  @include responsive('tablet') {
+    .form {
+      flex-basis: 60%;
+    }
+  }
+  @include responsive('mobile') {
+    .form {
+      flex-basis: 95%;
+    }
+  }
+}

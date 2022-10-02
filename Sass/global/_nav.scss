@@ -1,0 +1,136 @@
+@import 'variables';
+@import '../components/button';
+@import '../components/breakpoint';
+nav {
+  background: #ffff;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px 30px 5px 30px;
+  justify-content: space-between;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  .logo {
+    flex: 0.5;
+    img {
+      width: 80px;
+    }
+  }
+  #click {
+    display: none;
+  }
+  .fa-bars {
+    color: $maincolor;
+    font-size: 2rem;
+    cursor: pointer;
+    display: none;
+  }
+  ul {
+    display: flex;
+    list-style: none;
+    flex: 2;
+    justify-content: space-between;
+    align-items: center;
+    a {
+      button {
+        width: 110px;
+      }
+      #not-active {
+        background: none;
+        border: 4px solid $maincolor;
+        color: $maincolor;
+      }
+      @include responsive('tablet') {
+        button {
+          width: 75px;
+        }
+      }
+  }
+    li {
+      margin: 0 .7px;
+      a {
+        color: $maincolor;
+        letter-spacing: 1px;
+        font-size: 1rem;
+        padding: 8px 10px;
+        text-transform: uppercase;
+        font-weight: bold;
+        text-decoration: none;
+      }
+    }
+    li:hover::after {
+      width: 100%;
+    }
+    li a:hover,
+    #active,
+    .contain-fluid .row .text-center h2:hover {
+      color: $lightGray;
+    }
+  }
+  .nav-right {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    flex: 1;
+  }
+}
+@include responsive('mobile') {
+  body {
+    height: auto;
+    margin: 0;
+    padding: 0;
+  }
+  html {
+    font-size: 82%;
+  }
+  nav {
+    padding: 1rem 1.4rem;
+    position: sticky;
+    top: 0;
+    .logo img {
+      width: 4rem;
+      height: 4rem
+    }
+    ul {
+      position: fixed;
+      right: -100%;
+      top: 64px;
+      width: 100%;
+      display: block;
+      height: auto;
+      background: $lightGray;
+      text-align: left;
+      transition: all 1s ease;
+      padding: 0;
+      #active {
+        color: $maincolor;
+      }
+      .btn-group {
+        margin-left: 25px;
+        padding-bottom: 15px;
+      }
+      li {
+        margin: 0.8rem 2rem;
+        a {
+            display: block;
+            padding: 8px 0px;
+            color: $light;
+          }
+      }
+      &:hover {
+        transform: none;
+      }
+      &:hover::after {
+          width: 0;
+        }
+    }
+    .menu-bars .fa-bars {
+      display: block;
+    }
+    #click:checked~ul {
+      right: 0%;
+    }
+    #click:checked~.menu-bars i::before {
+      content: "\f00d";
+    }
+  }
+}

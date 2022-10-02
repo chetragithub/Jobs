@@ -1,0 +1,22 @@
+.card {
+  height: auto;
+  flex-basis: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.card a {
+  display: flex;
+  flex-direction: column;
+}
+.card a .card-title {
+  margin-top: 20px;
+  text-align: center;
+}
+
+@media screen and (max-width: 420px) {
+  .card {
+    flex-basis: 10% !important;
+  }
+}/*# sourceMappingURL=company.css.map */

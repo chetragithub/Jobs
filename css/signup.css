@@ -1,0 +1,102 @@
+.cand {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 30px;
+}
+
+.container {
+  height: auto;
+  display: flex;
+  justify-content: center;
+  background: rgba(225, 225, 225, 0.8745098039);
+}
+.container .form {
+  height: auto;
+  width: 45%;
+  padding: 20px 30px;
+  margin: 30px 0px;
+  background-color: #FFFFFF;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+.container .form h2 {
+  text-align: center;
+}
+.container .form .personal, .container .form .contact-info, .container .form .sign-up, .container .form p {
+  width: 100%;
+  margin-top: 10px;
+}
+.container .form .personal input, .container .form .contact-info input, .container .form .sign-up input, .container .form p input {
+  height: 35px;
+  width: 215px;
+  outline: none;
+  border: 3px solid #631EF6;
+  font-size: 1.1rem;
+  padding-left: 10px;
+  border-radius: 10px;
+}
+.container .form .personal {
+  display: flex;
+  gap: 10px;
+}
+.container .form .personal .first input, .container .form .personal .last input {
+  height: 40px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.container .form .contact-info input {
+  box-sizing: border-box;
+  height: 40px;
+  width: 100%;
+}
+.container .form .contact-info button {
+  width: 100%;
+}
+.container .form .contact-info button input[type=file] {
+  color: rgba(0, 0, 0, 0);
+  opacity: 0;
+}
+.container .form .choose div {
+  height: 32px;
+  border: 4px solid #631EF6;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+}
+.container .form .choose div label {
+  margin-left: 8px;
+  font-size: 1.1rem;
+  color: gray;
+}
+.container .form .upload input {
+  border: none;
+  margin-top: 5px;
+}
+.container .form .check {
+  margin-top: 10px;
+}
+.container .form .sign-up button {
+  width: 100%;
+}
+.container .form p {
+  text-align: center;
+}
+.container .form p a {
+  text-decoration: none;
+  font-weight: bold;
+  color: rgb(4, 232, 4);
+}
+.container .form p a:hover {
+  color: #222E39;
+}
+@media screen and (max-width: 830px) {
+  .container .form {
+    flex-basis: 60%;
+  }
+}
+@media screen and (max-width: 420px) {
+  .container .form {
+    flex-basis: 95%;
+  }
+}/*# sourceMappingURL=signup.css.map */

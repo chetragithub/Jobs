@@ -1,0 +1,51 @@
+@import 'variables';
+@import '../components/breakpoint';
+footer {
+  height: auto;
+  background: $subcolor;
+  font-family: $subtext;
+  color: $lightGray;
+  padding-bottom: 10px;
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    height: 80%;
+    margin: 0px 40px;
+    border-bottom: 1px solid $lightGray;
+    .text-group {
+      flex-basis: 27%;
+      margin-top: 40px;
+      .sub-text {
+        margin-top: 20px;
+        p {
+          line-height: 1.8rem;
+        }
+        a {
+          color: $lightGray;
+          display: flex;
+          align-items: center;
+          text-decoration: none;
+          p {
+            margin-left: 10px;
+          }
+          &:hover {
+            color: $light;
+          }
+        }
+      }
+    }
+  }
+  #link {
+    text-align: center;
+    margin-top: 20px;
+  }
+}
+
+@include responsive('mobile') {
+  footer {
+    .footer-top {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+  }
+}
